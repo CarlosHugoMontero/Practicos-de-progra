@@ -1,0 +1,34 @@
+// Diferencia de horas.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <math.h>
+using namespace std;
+void main ()
+{
+	int h1,m1,s1,h2,m2,s2,dh,dm,ds;
+	cout<<"Ingrese su primer hora: ";
+	cin>>h1;
+	cout<<"Ingrese su primer minuto: ";
+	cin>>m1;
+	cout<<"Ingrese su primer segundo: ";
+	cin>>s1;
+	cout<<"Ingrese su segunda hora: ";
+	cin>>h2;
+	cout<<"Ingrese su segundo minuto: ";
+	cin>>m2;
+	cout<<"Ingrese su segundo segundo: ";
+	cin>>s2;
+	dh= abs(h1-h2);
+	dm= abs(m1-m2);
+	ds= abs(s1-s2);
+	cout<<"La diferencia entre las horas sera: "<<endl;
+	cout<<dh;
+	cout<<"La diferencia entre los minutos sera: "<<endl;
+	cout<<dm;
+	cout<<"La diferencia entre los segundos sera: "<<endl;
+	cout<<ds;
+	getch();
+}
