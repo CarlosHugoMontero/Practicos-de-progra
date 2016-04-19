@@ -1,0 +1,26 @@
+// jhgh.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main ()
+{
+	int i,n;
+	float x,s;
+	s=0;
+	i=1;
+	cout<<"Ecribe su valor de x: ";
+	cin>>x;
+	cout<<"Escriba la cantidad de veces que quiere sumar su potencia de x: ";
+	cin>>n;
+	while (i<=n)
+	{s=s+(pow(x,i));
+	i=i+1;
+	}
+	cout<<"El resultado sera: ";
+	cout<<s;
+	getch();
+}
