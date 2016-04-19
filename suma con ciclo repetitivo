@@ -1,0 +1,25 @@
+// suma con ciclos .cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	int i,n,s;
+	i=1;
+	s=0;
+	do{
+	cout<<"Ingrese el numero hasta el cual quiere sumar: ";
+	cin>>n;
+	while (i<=n)
+		{s=s+i;
+	i=i+1;
+	}
+	cout<<"El resultado sera: ";
+	cout<<s<<endl;
+	}
+	while (n!=0);
+	getch();
+}
