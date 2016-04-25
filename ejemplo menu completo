@@ -1,0 +1,51 @@
+// rtthjgfhg.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+using namespace std;
+void main ()
+{
+	float op,b,h,r1,l1,r2,r,r3;
+	float pi=3.1416;
+	do{
+	cout<<"Presione opcion 1 para el area de un rectangulo: "<<endl;
+	cout<<"Presione opcion 2 para el area de un cuadrado: "<<endl;
+	cout<<"Presione opcion 3 para el area de una circunferencia: "<<endl;
+	cout<<"Presione opcion 4 para salir: "<<endl;
+	cin>>op;
+	if (op==1)
+	{
+		cout<<"Ingrese la base: ";
+		cin>>b;
+		cout<<"Ingrese la altura: ";
+		cin>>h;
+		r1=b*h;
+		cout<<"el resultado sera: "<<r1<<endl;
+	}
+	if (op==2)
+	{
+		cout<<"Ingrese el lado: ";
+		cin>>l1;
+		r2=l1*l1;
+		cout<<"El resultado de sera: "<<r2<<endl;
+	}
+	if (op==3)
+	{
+		cout<<"Ingrese el radio: ";
+		cin>>r;
+		r3=r*r*pi;
+		cout<<"El resultado de sera: "<<r3<<endl;
+	}
+	if (op==4)
+	{
+		cout<<"Gracias"<<endl;
+	}system("cls");
+	}
+	while (op!=4);
+	
+	getch ();
+	
+}
