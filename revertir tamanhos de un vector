@@ -1,0 +1,53 @@
+// loquita.cpp : Defines the entry point for the console application.
+// revertir ‘
+ valores de un vector
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define MAX 100
+using namespace std;
+void cargar (double vec[], int tam);
+void mostrar (double vec[], int tam);
+void invertir (double vec[], int tam);
+void main()
+{
+	int tam;
+	double vec[MAX];
+	cout<<"Ingrese el tamanho de sus vactores: ";
+	cin>>tam;
+	cargar (vec,tam);
+	mostrar (vec,tam);
+	invertir (vec,tam);
+	getch();
+
+}
+void cargar (double vec[], int tam)
+{
+	for (int i=0;i<tam; i++)
+	{
+		cout<<"vec["<<i<<"]:";
+		cin>>vec[i];
+	}
+}
+void mostrar (double vec[], int tam)
+{
+	for (int i=0;i<tam; i++)
+	{
+		cout<<"------------------------"<<endl;
+		cout<<"vec["<<i<<"]:"<<vec[i]<<endl;
+	}
+}
+
+void invertir (double vec[], int tam)
+{
+	
+	double vec1[MAX];
+	for (int i=0; i<tam; i++)
+	{
+		vec1[i]=vec[(tam-1)-i];
+		cout<<"vec["<<i<<"]:"<<vec1[i]<<endl;
+	
+	}
+}
