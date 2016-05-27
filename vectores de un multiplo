@@ -1,0 +1,32 @@
+// loqu.cpp : Defines the entry point for the console application.
+// vectores con multiplos
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+#define MAX 5
+using namespace std;
+void multiplo ( double vec[], int tam, int x);
+void main ()
+{
+	int x,tam;
+	double vec[MAX];
+	cout<<"Escriba el tamnhoa del vector: ";
+	cin>>tam;
+	cout<<"Escriba que multiplo del vector quiere saber: ";
+	cin>>x;
+	cout<<"El resultado del vector será: "<<endl;
+	multiplo (vec,tam,x);
+	getch();
+}
+void multiplo (double vec [], int tam, int x)
+{
+	int multiplo;
+	for (int i=0; i<tam; i++)
+	{
+		multiplo=x*(i+1);
+		cout<<"vec["<<i<<"]:"<<multiplo<<endl;
+	}
+}
+
