@@ -1,0 +1,34 @@
+// maximo valor de un vector
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+void cargar (double  vec[], int tam);
+void mostrar (double vec[], int tam);
+void main()
+{
+	int tam;
+	double vec[MAX];
+	cout<<"Escriba la cantidad de N que desea almacenar: "<<endl;
+	cin>>tam;
+	cargar(vec,tam);
+	mostrar(vec, tam);
+	getch();
+}
+void cargar (double vec[], int tam)
+{
+	for (int i=0;i<tam;i++)
+	{
+		cout<<"vec["<<i<<"]:"<<endl;
+		cin>>vec[i];
+	}
+}
+void mostrar (double vec[], int tam)
+{
+	for (int i=0;i<tam;i++)
+	{
+		cout<<"vec["<<i<<"]:"<<vec[i]<<endl;
+	}
+}
