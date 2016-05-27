@@ -1,0 +1,84 @@
+// loa.cpp : Defines the entry point for the console application.
+//leer dos vectores, compararlos cada valor de su respective espacio y escribir en un tercer vector el mayor
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+void cargar (double vec[], int tam);
+void mostrar (double vec[], int tam);
+void cargar2 (double vec2[], int tam);
+void mostrar2 (double vec2[], int tam);
+void comparacion (double vec[], double vec2[], int tam);
+void main()
+{
+	int tam;
+	double vec[MAX];
+	double vec2[MAX];
+	cout<<"Ingrese el tamanho de sus vactores: ";
+	cin>>tam;
+	cout<<"Su primer vector sera: "<<endl;
+	cargar (vec,tam);
+	mostrar (vec,tam);
+	cout<<"Su segundo vector sera: "<<endl;
+	cargar2 (vec2, tam);
+	mostrar2 (vec2, tam);
+	cout<<"El vector resultante sera: "<<endl;
+	comparacion (vec, vec2,tam);
+	getch();
+
+}
+void cargar (double vec[], int tam)
+{
+for (int i=0;i<tam; i++)
+	{
+		cout<<"vec["<<i<<"]:";
+		cin>>vec[i];
+	}
+}
+void mostrar (double vec[], int tam)
+{
+	for (int i=0;i<tam; i++)
+	{
+		cout<<"------------------------"<<endl;
+		cout<<"vec["<<i<<"]:"<<vec[i]<<endl;
+	}
+}
+void cargar2 (double vec2[], int tam)
+{
+for (int i=0;i<tam; i++)
+	{
+		cout<<"vec["<<i<<"]:";
+		cin>>vec2[i];
+	}
+}
+void mostrar2 (double vec2[], int tam)
+{
+	for (int i=0;i<tam; i++)
+	{
+		cout<<"-------------------------"<<endl;
+		cout<<"vec["<<i<<"]:"<<vec2[i]<<endl;
+	}
+}
+
+void comparacion (double vec[], double vec2[], int tam)
+
+{
+	double vec3[MAX];
+	for (int i=0; i<tam; i++)
+	{
+		if (vec[i]>vec2[i])
+		{
+			vec3[i]=vec[i];
+			cout<<"vec["<<i<<"]= "<<vec3[i]<<endl;
+		}
+		else 
+		{
+			vec3[i]=vec2[i];
+			cout<<"vec["<<i<<"]= "<<vec3[i]<<endl;
+		}
+	}
+}
+
+
