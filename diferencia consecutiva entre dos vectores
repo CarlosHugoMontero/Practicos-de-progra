@@ -1,0 +1,59 @@
+DIFERENCIA CONSECUTIVA ENTRE DOS VECTORES
+// loquita.cpp : Defines the entry point for the console application.
+//diferencia consecutive entre dos numeros
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define MAX 100
+using namespace std;
+void cargar (double vec[], int tam);
+void mostrar (double vec[], int tam);
+void diferencia (double vec[], int tam);
+void main()
+{
+	int tam;
+	double vec[MAX];
+	cout<<"Ingrese el tamanho de sus vactores: ";
+	cin>>tam;
+	cargar (vec,tam);
+	mostrar (vec,tam);
+	diferencia (vec,tam);
+	getch();
+
+}
+void cargar (double vec[], int tam)
+{
+for (int i=0;i<tam; i++)
+	{
+		cout<<"vec["<<i<<"]:";
+		cin>>vec[i];
+	}
+}
+void mostrar (double vec[], int tam)
+{
+	for (int i=0;i<tam; i++)
+	{
+		cout<<"------------------------"<<endl;
+		cout<<"vec["<<i<<"]:"<<vec[i]<<endl;
+	}
+}
+
+void diferencia (double vec[], int tam)
+{
+	
+	double mayor=abs(vec[0]-vec[1]);
+	for (int i=1; i<tam-1; i++)
+	{
+		if(mayor<abs(vec[i]-vec[i+1]))
+		{
+		mayor=abs(vec[i]-vec[i+1]);
+		}
+		else
+			mayor=mayor;
+	}
+		cout<<"la mayor diferencia sera: "<<mayor<<endl;
+	
+}
+
