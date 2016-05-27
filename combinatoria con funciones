@@ -1,0 +1,27 @@
+// loq.cpp : Defines the entry point for the console application.
+// combinatoria con funciones
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int fact (int n);
+void main ()
+{
+	int n,r;
+	cout<<"Escriba la cantidad de participantes";
+	cin>>n;
+	r=fact(n)/(fact(3)*fact(n-3));
+	cout<<"El resultado sera: "<<r<<endl;
+	getch();
+}
+int fact (int n)
+{
+	int fact=1;
+	for (int i=1;i<=n; i++)
+	{
+		fact=fact*i;
+	}
+	return (fact);
+}
+
