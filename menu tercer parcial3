@@ -1,0 +1,75 @@
+// lkjhgfd.cpp : Defines the entry point for the console application.
+// jhkgfdsa.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void raiz ( float x, float y, float z);
+void mayor ( float a, float b);
+void suma ( int n);
+void main ()
+{
+	float x,y,z,a,b;
+	int n,option;
+	cout<<"Bienvenido al menu ingrese la opcion de su preferencia"<<endl;
+	cout<<"1.Resultado del modulo de tres valores"<<endl;
+	cout<<"2.Mayor valor de dos numero reales"<<endl;
+	cout<<"3.Suma de N numeros enteros"<<endl;
+	cout<<"4.Salir del programa"<<endl;
+	cin>>option;
+	if ( option==1)
+	{
+		cout<<"Escriba el valor x,y,z"<<endl;
+		cin>>x>>y>>z;
+		raiz(x,y,z);
+	}
+	if (option==2)
+	{
+		cout<<"Escriba su primer valor: "<<endl;
+		cin>>a;
+		cout<<"Escriba su segundo valor: "<<endl;
+		cin>>b;
+		mayor(a,b);
+	}
+	if (option==3)
+	{
+		cout<<"Escriba la cantidad de termino que desea sumar: "<<endl;
+		cin>>n;
+		suma (n);
+	}
+	if (option==4)
+	{
+		cout<<"Hasta Luego"<<endl;
+	}
+	getch();
+}
+void raiz ( float x, float y, float z)
+{
+	float r;
+	r=sqrt((x*x)+(y*y)+(z*z));
+	cout<<"El valor de la raiz es: "<<r<<endl;
+}
+void mayor ( float a, float b)
+{
+	float may=a;
+	if (may<b)
+	{
+		may=b;
+	}
+	else
+	{
+	may=a;
+	}
+	cout<<"El valor mayor sera: "<<may<<endl;
+}
+void suma ( int n)
+{
+	float w=0;
+	for (int i=2; i<=n; i=i+2)
+	{
+		w=w+i;
+	}
+	cout<<"El valor de la suma sera: "<<w<<endl;
+}
