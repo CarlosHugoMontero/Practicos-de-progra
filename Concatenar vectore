@@ -1,0 +1,64 @@
+// jhkgfdsa.cpp : Defines the entry point for the console application.
+//
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define MAX 100
+using namespace std;
+void cargar1 (double vec1[], int tam1);
+void cargar2 (double vec2[], int tam2);
+void concatenar1 ( double vec1[], int tam1);
+void concatenar2 ( double vec2[],int tam2);
+void main ()
+{
+	double vec1[MAX],vec2[MAX];
+	int tam1,tam2;
+	cout<<"Ingrese el tamanho del vector"<<endl;
+	cin>>tam1;
+	cout<<"---------"<<endl;
+	cargar1 (vec1,tam1);
+	cout<<"---------"<<endl;
+	cout<<"Ingrese el tamanho del vector"<<endl;
+	cin>>tam2;
+	cout<<"---------"<<endl;
+	cargar2 (vec2,tam2);
+	cout<<"---------"<<endl;
+	concatenar1(vec1,tam1);
+	concatenar2(vec2,tam2);
+	getch();
+}
+
+void cargar1 (double vec1[], int tam)
+{
+	for ( int i=0; i<tam; i++){
+		cout<<"vec["<<i<<"]: ";
+		cin>>vec1[i];
+	}
+}
+void cargar2 (double vec2[],int tam)
+{
+	for (int i=0; i<tam; i++)
+	{
+		cout<<"vec["<<i<<"]: ";
+		cin>>vec2[i];
+	}
+}
+void concatenar1 ( double vec1[], int tam1)
+{
+	
+	for (int i=0; i<tam1; i++)
+	{
+	cout<<"vec["<<i<<"]: "<<vec1[i]<<endl;
+	}
+}
+void concatenar2 ( double vec2[],int tam2)
+{
+	
+	for (int i=0; i<tam2; i++)
+	{
+	cout<<"vec["<<i+tam1<<"]: "<<vec2[i]<<endl;
+	}
+}
